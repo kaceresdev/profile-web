@@ -1,0 +1,41 @@
+span {
+  color: #0000;
+  background: linear-gradient(-90deg, black 4px, transparent 0) 2px 0, linear-gradient(black 0 0) 0 0;
+  background-size: calc((var(--caracteres) * 1ch) - 1ch) 200%;
+  -webkit-background-clip: padding-box, text;
+  background-clip: padding-box, text;
+  background-repeat: no-repeat;
+  animation: blink 0.7s infinite step-end alternate,
+    tipyng calc(var(--caracteres) * 0.2s) steps(calc(var(--caracteres)));
+}
+
+@keyframes tipyng {
+  from {
+    background-size: 0 200%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    background-position: 0 -100%, 0 0;
+  }
+}
+
+@media (min-width: 480px) {
+}
+
+// Media query especial para la animación del tipyng
+@media (min-width: 490px) {
+  span {
+    background-size: calc(var(--caracteres) * 1ch) 200%;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1200px) {
+}
