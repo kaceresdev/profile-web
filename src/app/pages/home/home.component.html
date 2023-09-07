@@ -1,15 +1,12 @@
 <section class="home__container">
   <div class="home__container__header">
     <img src="assets/img/header-home.png" width="100%" />
-    <h1 class="home__container__header__title">Desarrollador web</h1>
-    <span class="home__container__header__tipyng" style="--caracteres: 27">Hola Mundo!, soy kaceresdev</span>
+    <h1 class="home__container__header__title">{{ 'HOME.POSITION' | translate }}</h1>
+    <span class="home__container__header__tipyng" style="--caracteres: 27">{{ 'HOME.GREETING' | translate }}</span>
     <img src="assets/img/matrix.png" width="100%" alt="chatea conmigo" class="home__container__header__matrix" />
   </div>
   <section class="home__container__personal__info">
-    <h2>KACERESDEV</h2>
-    <p>
-      Mi nombre es Javier Cáceres y me dedico al desarrollo de software. Mi carrera profesional está dirigida en
-      concreto al desarrollo Frontend, pero sin embargo, nunca he dejado de lado la tecnología Backend.
-    </p>
+    <h2>{{ 'HOME.KACERESDEV' | translate | uppercase }}</h2>
+    <p>{{ 'HOME.PERSONAL_INFO' | translate }}</p>
   </section>
 </section>
