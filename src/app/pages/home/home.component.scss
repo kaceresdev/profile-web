@@ -1,55 +1,64 @@
 .home__container {
-  top: 35px;
-  position: absolute;
+  &__header {
+    top: 35px;
+    position: relative;
 
-  h1.home__container__title {
-    position: absolute;
-    top: 34%;
-    left: 15px;
-    color: white;
-  }
+    h1.home__container__header__title {
+      position: absolute;
+      top: 34%;
+      left: 15px;
+      color: white;
+      font-size: 1.9em;
+    }
 
-  span.home__container__tipyng {
-    position: absolute;
-    top: 58%;
-    left: 15px;
-    color: white;
-    display: block;
-    white-space: nowrap;
-    border-right: 4px solid;
-    width: calc(var(--caracteres) * 1ch);
-    animation: tipyng 4s steps(var(--caracteres)), blink 0.7s infinite step-end alternate;
-    overflow: hidden;
-  }
+    span.home__container__header__tipyng {
+      position: absolute;
+      top: 58%;
+      left: 15px;
+      color: white;
+      display: block;
+      white-space: nowrap;
+      border-right: 4px solid;
+      width: calc(var(--caracteres) * 1ch);
+      animation: tipyng 4s steps(var(--caracteres)), blink 0.7s infinite step-end alternate;
+      overflow: hidden;
+    }
 
-  @keyframes tipyng {
-    from {
-      width: 0;
+    @keyframes tipyng {
+      from {
+        width: 0;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    img.home__container__header__matrix {
+      background: linear-gradient(#364051 0%, #364051 30%, transparent 70%);
+      position: relative;
+      top: -25px;
+      z-index: -1;
     }
   }
 
-  @keyframes blink {
-    50% {
-      border-color: transparent;
+  &__personal__info {
+    margin-left: 15px;
+    h2 {
     }
-  }
-
-  @media (min-width: 480px) {
-  }
-
-  @media (min-width: 768px) {
-  }
-
-  @media (min-width: 1024px) {
-  }
-
-  @media (min-width: 1200px) {
   }
 }
 
-.prueba {
-  background: linear-gradient(#364051 0%, #364051 30%, transparent 70%);
-  position: relative;
-  top: -25px;
-  z-index: -1;
+@media (min-width: 480px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1200px) {
 }
