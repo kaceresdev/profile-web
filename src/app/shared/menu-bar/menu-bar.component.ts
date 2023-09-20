@@ -12,4 +12,13 @@ export class MenuBarComponent {
     nav!.classList.toggle('open');
     menu!.classList.toggle('show');
   }
+
+  easterEgg() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const logo = document.getElementById('logo');
+    logo!.classList.add('spinner-logo');
+    setTimeout(() => {
+      logo!.classList.remove('spinner-logo');
+    }, 1000);
+  }
 }

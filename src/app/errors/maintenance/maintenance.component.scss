@@ -10,7 +10,7 @@
   &::before,
   &::after {
     position: absolute;
-    content: "";
+    content: '';
     top: 10%;
     left: 10%;
     height: 80%;
@@ -21,7 +21,7 @@
   }
 
   &::before {
-    background-color: #ff00de;
+    background-color: #fb66da;
     animation: backglow1 8s ease infinite;
   }
   @keyframes backglow1 {
@@ -52,7 +52,7 @@
   }
 
   &::after {
-    background-color: #009cff;
+    background-color: #fdae02;
     animation: backglow2 15s ease infinite;
   }
   @keyframes backglow2 {
@@ -85,6 +85,7 @@
   &__logo {
     z-index: 1;
     width: 50%;
+    border-radius: 50%;
   }
   &__text {
     font-size: x-large;
