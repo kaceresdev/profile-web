@@ -12,12 +12,51 @@
     />
     <div class="home__container__header__profile">
       <img src="assets/img/profile.jpeg" width="50%" alt="Javier Cáceres" />
-      <img src="assets/img/arrow-down.svg" width="10%" alt="Flecha abajo" (click)="scrollToElement('information')" />
+      <img src="assets/img/arrow-down.svg" width="10%" alt="Flecha abajo" (click)="scrollToElement('personal-info')" />
     </div>
   </div>
-  <section class="home__container__personal__info" id="information">
-    <h2>{{ 'HOME.KACERESDEV' | translate | uppercase }}</h2>
-    <p [innerHTML]="'HOME.PERSONAL_INFO' | translate" class="home__container__personal__info__text"></p>
+  <section class="home__container__personal__info" id="personal-info">
+    <h2>{{ 'HOME.PERSONAL_INFO_SECTION.TITLE' | translate | uppercase }}</h2>
+    <p [innerHTML]="'HOME.PERSONAL_INFO_SECTION.TEXT' | translate" class="home__container__personal__info__text"></p>
     <img src="assets/img/setup.jpg" width="100%" alt="Setup" />
   </section>
+  <div class="home__container__angular__separator">
+    <img
+      src="assets/img/angular-logo.png"
+      height="65px"
+      class="home__container__angular__separator__img"
+      alt="Logo Angular"
+    />
+  </div>
+  <section class="home__container__angular">
+    <h2 class="home__container__angular__title">{{ 'HOME.ANGULAR_SECTION.TITLE' | translate | uppercase }}</h2>
+    <p class="home__container__angular__text">{{ 'HOME.ANGULAR_SECTION.TEXT1' | translate }}</p>
+    <p class="home__container__angular__text">{{ 'HOME.ANGULAR_SECTION.TEXT2' | translate }}</p>
+    <p class="home__container__angular__text">{{ 'HOME.ANGULAR_SECTION.TEXT3' | translate }}</p>
+    <p class="home__container__angular__text">{{ 'HOME.ANGULAR_SECTION.TEXT4' | translate }}</p>
+  </section>
+  <section class="home__container__experience">
+    <div class="home__container__experience__semicircle">
+      <a href="https://www2.deloitte.com/es/es/services/Consultoria.html?icid=bottom_Consultoria">
+        <img
+          src="assets/img/deloitte.svg"
+          width="80%"
+          class="home__container__experience__semicircle__img"
+          alt="Deloitte logo"
+        />
+      </a>
+      <p>{{ 'HOME.EXPERIENCE_SECTION.DATE' | translate }}</p>
+    </div>
+    <p class="home__container__experience__positions">{{ 'HOME.EXPERIENCE_SECTION.EXPERIENCE1' | translate }}</p>
+    <p class="home__container__experience__positions">{{ 'HOME.EXPERIENCE_SECTION.EXPERIENCE2' | translate }}</p>
+    <p class="home__container__experience__positions">{{ 'HOME.EXPERIENCE_SECTION.EXPERIENCE3' | translate }}</p>
+    <p class="home__container__experience__positions">{{ 'HOME.EXPERIENCE_SECTION.EXPERIENCE4' | translate }}</p>
+    <p class="home__container__experience__positions">{{ 'HOME.EXPERIENCE_SECTION.EXPERIENCE5' | translate }}</p>
+  </section>
+  <div class="home__container__speak">
+    <h2 class="home__container__speak__title">{{ 'HOME.SPEAK' | translate }}</h2>
+    <button class="home__container__speak__button">
+      <span class="home__container__speak__button__text">{{ 'HOME.BUTTON_CONTACT' | translate | uppercase }}</span>
+    </button>
+  </div>
 </section>

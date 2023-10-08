@@ -19,6 +19,6 @@ export class MenuBarComponent {
     logo!.classList.add('spinner-logo');
     setTimeout(() => {
       logo!.classList.remove('spinner-logo');
-    }, 1000);
+    }, 500);
   }
 }

@@ -1,0 +1,12 @@
+footer {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  height: 5rem;
+  align-items: center;
+  a {
+    text-align: center;
+  }
+}

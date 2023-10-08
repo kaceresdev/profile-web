@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  scrollToElement(element: string): void {
-    document.getElementById(element)!.scrollIntoView({ behavior: 'smooth' });
+  scrollToElement(e: string): void {
+    const pixelesGap = 60;
+    const element = document.getElementById(e);
+    const verticalOffset = element!.getBoundingClientRect().top - pixelesGap;
+    window.scrollBy({ top: verticalOffset, left: 0, behavior: 'smooth' });
   }
 }

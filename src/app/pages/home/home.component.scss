@@ -1,6 +1,6 @@
 .home__container {
   &__header {
-    top: 35px;
+    top: 45px;
     position: relative;
 
     h1.home__container__header__title {
@@ -77,6 +77,89 @@
     &__text {
       padding: 0px 10px;
       font-size: 15px;
+    }
+  }
+
+  &__angular {
+    margin: 35px 15px;
+    &__separator {
+      width: 100%;
+      height: 5px;
+      background: radial-gradient(circle, #e23337 0%, #e23337 30%, white 100%);
+      text-align: center;
+      border-radius: 50%;
+      margin-top: 3.5rem;
+      &__img {
+        position: relative;
+        top: -25px;
+      }
+    }
+    &__title {
+      float: right;
+    }
+    &__text {
+      padding: 0px 10px;
+      font-size: 15px;
+    }
+  }
+
+  &__experience {
+    margin: 35px 0;
+    &__semicircle {
+      float: right;
+      width: 10rem;
+      height: 20rem;
+      clip-path: circle(63% at 100%);
+      shape-outside: circle(70% at 100%);
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      & > a {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+      }
+      &__img {
+        padding: 0 1rem;
+      }
+    }
+    &__positions {
+      margin: 35px 15px;
+      border-bottom: 1.5px solid transparent;
+      border-image: linear-gradient(0.25turn, #87bd25, transparent 70%);
+      border-image-slice: 1;
+    }
+  }
+  &__speak {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+      text-align: center;
+    }
+    &__button {
+      background: transparent;
+      background-image: linear-gradient(90deg, white, white), linear-gradient(to right, #fdaa00, #f565db);
+      background-clip: padding-box, border-box;
+      background-origin: border-box;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      padding: 3% 7%;
+      transition: all 0.2s ease-in-out;
+      &__text {
+        background-image: linear-gradient(to right, #fdaa00, #f565db);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-weight: bold;
+        font-size: large;
+      }
+    }
+    &__button:hover {
+      transform: scale(1.2);
     }
   }
 }

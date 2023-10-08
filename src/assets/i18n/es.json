@@ -1,8 +1,28 @@
 {
+  "MAINTENANCE": "Web en construcción...",
   "HOME": {
     "POSITION": "Desarrollador web",
     "GREETING": "Hola Mundo!, soy kaceresdev",
-    "KACERESDEV": "kaceresdev",
-    "PERSONAL_INFO": "Soy Javier Cáceres, un apasionado desarrollador web con una sólida experiencia en la creación de sitios web impresionantes y funcionales. Mi misión es transformar ideas en realidad digital, ofreciendo soluciones web innovadoras y atractivas para mis clientes.<br><br>Mi viaje en el mundo del desarrollo web comenzó hace más de 2 años y desde entonces, he estado inmerso en el emocionante mundo de la programación. Mi enfoque se basa en la combinación de diseño creativo y desarrollo técnico sólido para crear sitios web que no solo sean visualmente atractivos, sino también altamente funcionales."
+    "PERSONAL_INFO_SECTION": {
+      "TITLE": "kaceresdev",
+      "TEXT": "Mi nombre es Javier Cáceres Bordallo, un Ingeniero Electrónico de Comunicaciones apasionado por el desarrollador web con una sólida experiencia en la creación de sitios web impresionantes y funcionales. Mi misión es transformar ideas en realidad digital, ofreciendo soluciones web innovadoras y atractivas para mis clientes.<br><br>Mi viaje en el mundo del desarrollo web comenzó en el año 2021 y desde entonces, he estado inmerso en el emocionante mundo de la programación.<br><br>Aunque mi enfoque principal es el desarrollo web frontal, siempre intento aprender tecnologías backend para aplicarlas posteriormente a mis proyectos web. MongoDB y DB2 son ejemplos de tecnologías con las que trabajo para desarrollos backend y al igual que Firebase como plataforma de Google para el Hosting y las bases de datos Realtime."
+    },
+    "ANGULAR_SECTION": {
+      "TITLE": "Consultor Angular",
+      "TEXT1": "Dentro del mundo del desarrollo web, me enorgullece decir que mi especialización se centra en el framework de JavaScript Angular.",
+      "TEXT2": "Pero por si aún no sabes que es Angular, yo te lo explico 😉. Angular es uno de los frameworks de JavaScript más populares y versátiles disponibles en la actualidad. Se utiliza para crear aplicaciones web dinámicas y escalables, y ha sido ampliamente adoptado por empresas líderes en la industria. Su enfoque en la modularidad, la facilidad de mantenimiento y la eficiencia en el rendimiento lo convierte en una elección preferida para el desarrollo de aplicaciones web de alta calidad.",
+      "TEXT3": "Por todo ello, elegir a un experto en Angular puede marcar la diferencia en la calidad y el rendimiento de tus aplicaciones web. Al aprovechar las capacidades de este framework, puedo ayudarte a crear aplicaciones más rápidas, más seguras y más escalables.",
+      "TEXT4": "¿Aún te lo estás pensando? Veamos mi experiencia:"
+    },
+    "EXPERIENCE_SECTION": {
+      "DATE": "2021-actualidad",
+      "EXPERIENCE1": "Pasarela de Pagos y web de administración",
+      "EXPERIENCE2": "Landing Page Empresa de Energías Renovables",
+      "EXPERIENCE3": "Web Administración de Empresa Retail",
+      "EXPERIENCE4": "Web Clientes de Empresa Retail con MarkoJs",
+      "EXPERIENCE5": "Migración de aplicación a Micro-Frontends"
+    },
+    "SPEAK": "¿Charlamos?",
+    "BUTTON_CONTACT": "Contacta conmigo"
   }
 }

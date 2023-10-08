@@ -1,5 +1,5 @@
 .menu-bar__container {
-  height: 35px;
+  height: 45px;
   background-color: black;
   display: flex;
   flex-direction: row;
@@ -82,7 +82,7 @@
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    top: 15px;
+    top: 20px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -92,7 +92,7 @@
       width: 45px;
       border-radius: 50%;
       filter: drop-shadow(0 0 7px rgba(255, 255, 255, 1));
-      transition: transform 1s ease;
+      transition: transform 0.5s ease;
     }
     img.spinner-logo {
       transform: rotate(180deg);
