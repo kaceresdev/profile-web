@@ -162,6 +162,26 @@
       transform: scale(1.2);
     }
   }
+
+  &__blog {
+    margin: 35px 15px;
+    &__title {
+      font-size: medium;
+    }
+    &__posts {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 5% 2% 0% 2%;
+      margin: 5% 10%;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+      &__text {
+        padding: 0 7%;
+        font-size: small;
+      }
+    }
+  }
 }
 
 @media (min-width: 480px) {
