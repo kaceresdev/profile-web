@@ -1,6 +1,6 @@
 .menu-bar__container {
-  height: 45px;
-  background-color: black;
+  height: 50px;
+  backdrop-filter: blur(15px);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -78,20 +78,17 @@
   }
 
   &__logo {
-    background-color: black;
-    width: 70px;
-    height: 70px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    top: 20px;
     position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
-    z-index: 1;
+    justify-content: center;
     img {
-      width: 45px;
+      width: 40px;
       border-radius: 50%;
-      filter: drop-shadow(0 0 7px rgba(255, 255, 255, 1));
+      filter: drop-shadow(0 0 5px white);
       transition: transform 0.5s ease;
     }
     img.spinner-logo {

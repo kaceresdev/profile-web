@@ -1,26 +1,77 @@
 <section class="home__container">
-  <div class="home__container__header">
-    <img src="assets/img/header-home.png" width="100%" alt="Collage de tecnologías" />
+  <section class="home__container__header">
     <h1 class="home__container__header__title">{{ 'HOME.POSITION' | translate }}</h1>
     <span class="home__container__header__tipyng" style="--caracteres: 27">{{ 'HOME.GREETING' | translate }}</span>
-    <img
-      src="assets/img/matrix.png"
-      width="100%"
-      alt="chatea conmigo"
-      class="home__container__header__matrix"
-      alt="Separador matrix"
-    />
-    <div class="home__container__header__profile">
-      <img src="assets/img/profile.jpeg" width="50%" alt="Javier Cáceres" />
-      <img src="assets/img/arrow-down.svg" width="10%" alt="Flecha abajo" (click)="scrollToElement('personal-info')" />
-    </div>
-  </div>
-  <section class="home__container__personal__info" id="personal-info">
-    <h2>{{ 'HOME.PERSONAL_INFO_SECTION.TITLE' | translate | uppercase }}</h2>
-    <p [innerHTML]="'HOME.PERSONAL_INFO_SECTION.TEXT' | translate" class="home__container__personal__info__text"></p>
-    <img src="assets/img/setup.jpg" width="100%" alt="Setup" />
   </section>
-  <div class="home__container__angular__separator">
+  <section class="home__container__personal__info">
+    <h2>{{ 'HOME.PERSONAL_INFO_SECTION.TITLE' | translate | uppercase }}</h2>
+    <p class="home__container__personal__info__text">{{ 'HOME.PERSONAL_INFO_SECTION.TEXT' | translate }}</p>
+  </section>
+  <section class="home__container__technologies">
+    <p class="home__container__technologies__text">{{ 'HOME.TECHNOLOGIES.TEXT' | translate }}</p>
+    <div class="home__container__technologies__slider" [ngStyle]="{ '--sliderElements': technologiesSlider.length }">
+      <div class="home__container__technologies__slider__track" id="slider-track" (click)="sliderPause('slider-track')">
+        <div
+          class="home__container__technologies__slider__track__slide"
+          *ngFor="let technology of technologiesSlider.concat(technologiesSlider)"
+        >
+          <img src="{{ technology.imgSrc }}" alt="{{ technology.alt }}" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="home__container__arrowDown">
+    <img
+      src="assets/img/arrow-down.svg"
+      class="home__container__arrowDown__bounce"
+      width="10%"
+      alt="Flecha abajo"
+      (click)="scrollToElement('angular-section')"
+    />
+  </div>
+  <section class="home__container__angular" id="angular-section">
+    <div class="home__container__angular__box">
+      <div class="home__container__angular__box__container">
+        <img
+          src="assets/img/angular-logo.png"
+          width="60px"
+          alt="Logo Angular"
+          class="home__container__angular__box__container__image"
+        />
+        <p class="home__container__angular__box__container__text">{{ 'HOME.ANGULAR.TEXT' | translate }}</p>
+      </div>
+    </div>
+  </section>
+  <section class="home__container__react">
+    <div class="home__container__react__box">
+      <div class="home__container__react__box__container">
+        <img
+          src="assets/img/react-logo.png"
+          width="60px"
+          alt="Logo React"
+          class="home__container__react__box__container__image"
+        />
+        <p class="home__container__react__box__container__text">{{ 'HOME.LOCK' | translate | uppercase }}</p>
+        <img class="home__container__react__box__container__lock" src="assets/img/lock.svg" alt="Candado" />
+      </div>
+    </div>
+  </section>
+  <section class="home__container__swift">
+    <div class="home__container__swift__box">
+      <div class="home__container__swift__box__container">
+        <img
+          src="assets/img/swift-logo.png"
+          width="60px"
+          alt="Logo Swift"
+          class="home__container__swift__box__container__image"
+        />
+        <p class="home__container__swift__box__container__text">{{ 'HOME.LOCK' | translate | uppercase }}</p>
+        <img class="home__container__swift__box__container__lock" src="assets/img/lock.svg" alt="Candado" />
+      </div>
+    </div>
+  </section>
+
+  <!-- <div class="home__container__angular__separator">
     <img
       src="assets/img/angular-logo.png"
       height="65px"
@@ -65,5 +116,5 @@
       <img src="assets/img/setup.jpg" width="70%" alt="" />
       <p class="home__container__blog__posts__text">Angular logo descripción breve del post</p>
     </div>
-  </section>
+  </section> -->
 </section>
