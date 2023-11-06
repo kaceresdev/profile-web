@@ -1,1 +1,13 @@
-
+.app__root {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: -webkit-fill-available;
+  height: fill-available;
+  &__footer {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+  }
+}
