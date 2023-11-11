@@ -3,11 +3,20 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  height: -webkit-fill-available;
-  height: fill-available;
+  height: stretch;
+  min-height: 100vh;
   &__footer {
     flex: 1;
     display: flex;
     align-items: flex-end;
   }
+}
+.app__root__maintenance {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: stretch;
+  min-height: 100vh;
+  background: black;
 }

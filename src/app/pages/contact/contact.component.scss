@@ -1,12 +1,11 @@
 .contact__container {
   padding: 70px 20px;
   h2 {
-    margin: 2rem 0;
+    margin: 3rem 0;
   }
   input,
   textarea {
-    width: -webkit-fill-available;
-    width: fill-available;
+    width: stretch;
     border-radius: 10px;
     background-color: #474747;
     border: none;
@@ -32,6 +31,9 @@
       font-size: x-large;
       font-weight: bold;
       color: black;
+    }
+    &__button:disabled {
+      filter: grayscale(1);
     }
   }
 }

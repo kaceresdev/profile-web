@@ -1,12 +1,14 @@
 <div class="contact__container">
-  <h2>Contacta conmigo</h2>
-  <h3>Email</h3>
-  <input type="email" />
-  <h3>Asunto</h3>
-  <input type="text" />
-  <h3>Comentario</h3>
-  <textarea cols="30" rows="10"></textarea>
-  <div class="contact__container__divButton">
-    <button class="contact__container__divButton__button">Enviar</button>
-  </div>
+  <form [formGroup]="mailForm" (ngSubmit)="onSubmit()">
+    <h2>Contacta conmigo</h2>
+    <h3>Email</h3>
+    <input type="email" formControlName="email" />
+    <h3>Asunto</h3>
+    <input type="text" formControlName="subject" />
+    <h3>Comentario</h3>
+    <textarea cols="30" rows="10" formControlName="comments"></textarea>
+    <div class="contact__container__divButton">
+      <button class="contact__container__divButton__button" type="submit" [disabled]="!mailForm.valid">Enviar</button>
+    </div>
+  </form>
 </div>
