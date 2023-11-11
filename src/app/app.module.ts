@@ -11,7 +11,8 @@ import { MenuBarComponent } from './shared/menu-bar/menu-bar.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FooterComponent } from './shared/footer/footer.component';
-import { ContactComponent } from './pages/contact/contact/contact.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -19,11 +20,19 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, MaintenanceComponent, MenuBarComponent, FooterComponent, ContactComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    MaintenanceComponent,
+    MenuBarComponent,
+    FooterComponent,
+    ContactComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     TranslateModule.forRoot({
       defaultLanguage: 'es',
       loader: {
