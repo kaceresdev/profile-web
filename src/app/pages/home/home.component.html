@@ -4,8 +4,11 @@
     <span class="home__container__header__tipyng" style="--caracteres: 27">{{ 'HOME.GREETING' | translate }}</span>
   </section>
   <section class="home__container__personal__info">
-    <h2>{{ 'HOME.PERSONAL_INFO_SECTION.TITLE' | translate | uppercase }}</h2>
+    <h2 class="home__container__personal__info__title">
+      {{ 'HOME.PERSONAL_INFO_SECTION.TITLE' | translate | uppercase }}
+    </h2>
     <p class="home__container__personal__info__text">{{ 'HOME.PERSONAL_INFO_SECTION.TEXT' | translate }}</p>
+    <img src="assets/img/profile.jpeg" class="home__container__personal__info__img" width="40%" alt="" />
   </section>
   <section class="home__container__technologies">
     <p class="home__container__technologies__text">{{ 'HOME.TECHNOLOGIES.TEXT' | translate }}</p>
@@ -70,7 +73,25 @@
       </div>
     </div>
   </section>
-
+  <section class="home__container__softSkills">
+    <h2 class="home__container__softSkills__title">{{ 'HOME.SOFT_SKILLS' | translate }}</h2>
+    <div class="home__container__softSkills__tags">
+      <div class="home__container__softSkills__tags__tag" *ngFor="let skill of softSkills">{{ skill }}</div>
+    </div>
+  </section>
+  <div class="home__container__speak">
+    <h2 class="home__container__speak__title">{{ 'HOME.SPEAK' | translate }}</h2>
+    <button class="home__container__speak__button">
+      <span class="home__container__speak__button__text">{{ 'HOME.BUTTON_CONTACT' | translate | uppercase }}</span>
+    </button>
+  </div>
+  <section class="home__container__blog">
+    <h2 class="home__container__blog__title">Continua descubriendo mi blog</h2>
+    <div class="home__container__blog__posts">
+      <img src="assets/img/setup.jpg" width="70%" alt="" />
+      <p class="home__container__blog__posts__text">Angular logo descripción breve del post</p>
+    </div>
+  </section>
   <!-- <div class="home__container__angular__separator">
   <div class="home__container__angular__separator">
     <img

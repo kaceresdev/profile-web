@@ -57,6 +57,19 @@ export class HomeComponent implements OnInit {
     },
   ];
 
+  softSkills = [
+    'pensamiento crítico',
+    'compromiso',
+    'trabajo en equipo',
+    'creatividad',
+    'resolución de problemas',
+    'gestión del tiempo',
+    'positividad',
+    'liderazgo',
+    'empatía',
+    'organización',
+  ];
+
   ngOnInit(): void {}
 
   sliderPause(idElement: string) {
