@@ -8,6 +8,12 @@
       {{ 'HOME.PERSONAL_INFO_SECTION.TITLE' | translate | uppercase }}
     </h2>
     <p class="home__container__personal__info__text">{{ 'HOME.PERSONAL_INFO_SECTION.TEXT' | translate }}</p>
+    <p class="home__container__personal__info__text text-center">
+      {{ 'HOME.PERSONAL_INFO_SECTION.TEXT2' | translate }}
+    </p>
+    <p class="home__container__personal__info__text text-center">
+      {{ 'HOME.PERSONAL_INFO_SECTION.TEXT3' | translate }}
+    </p>
     <img src="assets/img/profile.jpeg" class="home__container__personal__info__img" width="40%" alt="" />
   </section>
   <section class="home__container__technologies">
@@ -81,7 +87,7 @@
   </section>
   <div class="home__container__speak">
     <h2 class="home__container__speak__title">{{ 'HOME.SPEAK' | translate }}</h2>
-    <button class="home__container__speak__button">
+    <button class="home__container__speak__button" routerLink="/contact">
       <span class="home__container__speak__button__text">{{ 'HOME.BUTTON_CONTACT' | translate | uppercase }}</span>
     </button>
   </div>

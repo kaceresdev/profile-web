@@ -20,8 +20,8 @@
     </a>
   </div>
 </nav>
-<!-- <div id="menu-items">
-  <li class="item"><p>Home</p></li>
-  <li class="item"><p>Proyectos</p></li>
-  <li class="item"><p>About me</p></li>
-</div> -->
+<div id="menu-items">
+  <li class="item" *ngFor="let item of menuItems">
+    <a [routerLink]="item.route" (click)="toggleNavIcon()">{{ item.title }}</a>
+  </li>
+</div>

@@ -50,10 +50,14 @@
     &__text {
       padding: 0px 10px;
       font-size: 15px;
+      &.text-center {
+        text-align: center;
+      }
     }
     &__img {
       border-radius: 50%;
       align-self: center;
+      margin: 1rem;
     }
   }
 
