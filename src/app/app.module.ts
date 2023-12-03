@@ -13,6 +13,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BlogComponent } from './pages/blog/blog.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -27,6 +28,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MenuBarComponent,
     FooterComponent,
     ContactComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,

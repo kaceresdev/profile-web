@@ -17,7 +17,7 @@ export class MenuBarComponent {
     },
     {
       title: 'Blog',
-      route: '/',
+      route: '/blog',
     },
     {
       title: 'Conóceme más',
