@@ -14,6 +14,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BlogComponent } from './pages/blog/blog.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getDatabase, provideDatabase } from '@angular/fire/database';
+import { environment } from 'src/environments/environment';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -43,6 +46,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient],
       },
     }),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideDatabase(() => getDatabase()),
   ],
   providers: [],
   bootstrap: [AppComponent],
