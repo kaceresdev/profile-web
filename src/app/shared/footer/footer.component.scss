@@ -9,5 +9,36 @@ footer {
   background: linear-gradient(to right, #fdaa04, #fb68da);
   a {
     text-align: center;
+    img {
+      width: 30%;
+    }
+  }
+}
+
+@media (min-width: 540px) {
+  footer {
+    height: 4.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    a {
+      img {
+        width: 25%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    width: 100%;
+    justify-content: space-around;
+    a {
+      img {
+        width: 3rem;
+      }
+    }
   }
 }

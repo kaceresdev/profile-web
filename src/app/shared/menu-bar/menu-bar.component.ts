@@ -19,10 +19,6 @@ export class MenuBarComponent {
       title: 'Blog',
       route: '/blog',
     },
-    {
-      title: 'Conóceme más',
-      route: '/',
-    },
   ];
 
   toggleNavIcon() {

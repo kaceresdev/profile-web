@@ -12,7 +12,7 @@
       margin-bottom: 1.5rem;
       padding-top: 4rem;
       margin-top: 0;
-      text-align-last: end;
+      text-align-last: center;
     }
 
     span.home__container__header__tipyng {
@@ -41,7 +41,7 @@
   }
 
   &__personal__info {
-    margin: 35px 15px;
+    margin: 35px 25px;
     display: flex;
     flex-direction: column;
     &__title {
@@ -58,6 +58,7 @@
       border-radius: 50%;
       align-self: center;
       margin: 1rem;
+      max-width: 250px;
     }
   }
 
@@ -115,6 +116,7 @@
         border-radius: 5px;
         background-color: #474747;
         color: white;
+        margin: 5px;
       }
     }
   }
@@ -141,8 +143,15 @@
     }
   }
 
+  &__technologiesSections {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   &__angular {
-    margin: 45px 15px;
+    margin: 20px 40px;
     display: flex;
     justify-content: center;
     &__box {
@@ -200,7 +209,7 @@
   }
 
   &__react {
-    margin: 45px 15px;
+    margin: 20px 40px;
     display: flex;
     justify-content: center;
     &__box {
@@ -262,7 +271,7 @@
     }
   }
   &__swift {
-    margin: 45px 15px;
+    margin: 20px 40px;
     display: flex;
     justify-content: center;
     &__box {
@@ -358,6 +367,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5rem;
     &__title {
       text-align: center;
     }
@@ -447,13 +457,380 @@
 }
 
 @media (min-width: 480px) {
+  .home__container {
+    &__header {
+      padding: 0 35px 0;
+      span.home__container__header__tipyng {
+        font-size: 20px;
+      }
+    }
+    &__personal__info {
+      margin: 35px 35px;
+      &__title {
+        font-size: 30px;
+      }
+      &__text {
+        font-size: 20px;
+      }
+    }
+    &__technologies {
+      margin: 35px 35px;
+      &__text {
+        font-size: 20px;
+      }
+    }
+    &__angular {
+      &__box {
+        height: 24rem;
+        width: 22rem;
+        &::before {
+          height: 31rem;
+          width: 33rem;
+        }
+        &::after {
+          height: 23.7rem;
+          width: 21.7rem;
+        }
+        &__container {
+          font-size: 20px;
+          &__image {
+            padding: 40px 0 15px 0;
+          }
+        }
+      }
+    }
+    &__react {
+      &__box {
+        height: 24rem;
+        width: 22rem;
+        &::before {
+          height: 31rem;
+          width: 33rem;
+        }
+        &::after {
+          height: 23.7rem;
+          width: 21.7rem;
+        }
+        &__container {
+          font-size: 20px;
+          &__image {
+            padding: 40px 0 15px 0;
+          }
+        }
+      }
+    }
+    &__swift {
+      &__box {
+        height: 24rem;
+        width: 22rem;
+        &::before {
+          height: 31rem;
+          width: 33rem;
+        }
+        &::after {
+          height: 23.7rem;
+          width: 21.7rem;
+        }
+        &__container {
+          font-size: 20px;
+          &__image {
+            padding: 40px 0 15px 0;
+          }
+        }
+      }
+    }
+    &__softSkills {
+      margin: 35px 35px;
+      &__title {
+        font-size: 30px;
+      }
+      &__tags {
+        row-gap: 15px;
+        &__tag {
+          padding: 10px;
+          font-size: 20px;
+        }
+      }
+    }
+    &__speak {
+      &__title {
+        font-size: 30px;
+      }
+    }
+    &__blog {
+      margin: 35px 35px;
+      &__title {
+        font-size: 20px;
+      }
+      &__posts {
+        &__text {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 540px) {
+  .home__container {
+    &__header {
+      h1.home__container__header__title {
+        font-size: 5.3rem;
+      }
+      span.home__container__header__tipyng {
+        font-size: 23px;
+      }
+    }
+    &__personal__info {
+      &__title {
+        font-size: 32px;
+      }
+    }
+    &__softSkills {
+      &__title {
+        font-size: 32px;
+      }
+    }
+    &__speak {
+      &__title {
+        font-size: 32px;
+      }
+    }
+    &__blog {
+      &__title {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .home__container {
+    &__header {
+      h1.home__container__header__title {
+        padding-top: 6rem;
+      }
+      span.home__container__header__tipyng {
+        font-size: 25px;
+      }
+    }
+    &__personal__info {
+      &__title {
+        font-size: 34px;
+      }
+    }
+    &__softSkills {
+      &__title {
+        font-size: 34px;
+      }
+    }
+    &__speak {
+      &__title {
+        font-size: 34px;
+      }
+    }
+    &__blog {
+      &__title {
+        font-size: 24px;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
+  .home__container {
+    &__header {
+      // h1.home__container__header__title {
+      //   font-size: 7.3rem;
+      // }
+      // span.home__container__header__tipyng {
+      //   font-size: 27px;
+      // }
+    }
+
+    &__speak {
+      &__button {
+        &__text {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 860px) {
+  .home__container {
+    &__header {
+      // h1.home__container__header__title {
+      //   font-size: 8.3rem;
+      // }
+      // span.home__container__header__tipyng {
+      //   font-size: 30px;
+      // }
+    }
+  }
+}
+
+@media (min-width: 970px) {
+  .home__container {
+    &__header {
+      // h1.home__container__header__title {
+      //   font-size: 9.3rem;
+      // }
+      // span.home__container__header__tipyng {
+      //   font-size: 32px;
+      // }
+    }
+  }
 }
 
 @media (min-width: 1024px) {
+  .home__container {
+    &__header {
+      padding: 0 50px 0;
+      // h1.home__container__header__title {
+      //   font-size: 10.3rem;
+      // }
+      // span.home__container__header__tipyng {
+      //   font-size: 34px;
+      // }
+    }
+    &__personal__info {
+      margin: 35px 50px;
+      &__img {
+        width: 25%;
+      }
+    }
+    &__technologies {
+      margin: 35px 50px;
+    }
+    &__softSkills {
+      margin: 35px 50px;
+    }
+    &__blog {
+      margin: 35px 50px;
+    }
+  }
 }
 
 @media (min-width: 1200px) {
+  .home__container {
+    &__header {
+      padding: 0 50px 0;
+    }
+    &__personal__info {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      &__title {
+        order: 1;
+        width: 100%;
+      }
+      &__text {
+        font-size: 15px;
+        &:nth-child(2) {
+          order: 2;
+          width: 55%;
+        }
+        &:nth-child(3) {
+          order: 4;
+          white-space: nowrap;
+          font-size: 17px;
+        }
+        &:nth-child(4) {
+          order: 5;
+          white-space: nowrap;
+          font-size: 17px;
+        }
+      }
+      &__img {
+        order: 3;
+        width: 20%;
+      }
+    }
+    &__technologiesSections {
+      margin-top: 3rem;
+      margin-bottom: 4rem;
+    }
+    &__angular {
+      &__box {
+        height: 21rem;
+        width: 19rem;
+        &::before {
+          height: 28rem;
+          width: 30rem;
+        }
+        &::after {
+          height: 20.7rem;
+          width: 18.7rem;
+        }
+        &__container {
+          font-size: 15px;
+          &__image {
+            padding: 40px 0 15px 0;
+          }
+        }
+      }
+    }
+    &__react {
+      &__box {
+        height: 21rem;
+        width: 19rem;
+        &::before {
+          height: 28rem;
+          width: 30rem;
+        }
+        &::after {
+          height: 20.7rem;
+          width: 18.7rem;
+        }
+        &__container {
+          font-size: 15px;
+          &__image {
+            padding: 40px 0 15px 0;
+          }
+        }
+      }
+    }
+    &__swift {
+      &__box {
+        height: 21rem;
+        width: 19rem;
+        &::before {
+          height: 28rem;
+          width: 30rem;
+        }
+        &::after {
+          height: 20.7rem;
+          width: 18.7rem;
+        }
+        &__container {
+          font-size: 15px;
+          &__image {
+            padding: 40px 0 15px 0;
+          }
+        }
+      }
+    }
+    &__softSkills {
+      &__tags {
+        padding: 0 25%;
+        justify-content: space-around;
+        row-gap: 0;
+        &__tag {
+          font-size: 15px;
+        }
+      }
+    }
+    &__speak {
+      &__button {
+        padding: 2% 4%;
+        &__text {
+          font-size: 20px;
+        }
+      }
+    }
+  }
 }

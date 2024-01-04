@@ -1,5 +1,5 @@
 .menu-bar__container {
-  height: 50px;
+  height: 3.5rem;
   backdrop-filter: blur(15px);
   display: flex;
   flex-direction: row;
@@ -135,4 +135,52 @@
 #menu-items.show {
   opacity: 1;
   z-index: 2;
+}
+
+@media (min-width: 540px) {
+  .menu-bar__container {
+    height: 4.5rem;
+
+    #nav-icon {
+      width: 50px;
+      height: 35px;
+    }
+
+    #nav-icon span {
+      height: 7px;
+    }
+
+    #nav-icon span:nth-child(1) {
+      top: 0px;
+    }
+
+    #nav-icon span:nth-child(2) {
+      top: 15px;
+    }
+
+    #nav-icon span:nth-child(3) {
+      top: 30px;
+    }
+
+    &__logo {
+      width: 50px;
+      height: 50px;
+      img {
+        width: 50px;
+      }
+    }
+
+    &__chat {
+      width: 50px;
+      height: 60px;
+      & > a > img {
+        width: 60px;
+      }
+    }
+  }
+  #menu-items {
+    li.item {
+      font-size: 40px;
+    }
+  }
 }

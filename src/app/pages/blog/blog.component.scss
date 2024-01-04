@@ -42,5 +42,24 @@
         font-size: large;
       }
     }
+    &__button:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog__container {
+    &__post {
+      &__img {
+        max-height: 4rem;
+        width: auto;
+      }
+    }
+    &__blog {
+      &__button {
+        padding: 2% 4%;
+      }
+    }
   }
 }

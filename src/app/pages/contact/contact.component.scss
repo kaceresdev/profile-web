@@ -1,4 +1,6 @@
 .contact__container {
+  display: flex;
+  justify-content: center;
   padding: 70px 20px;
   h2 {
     margin: 3rem 0;
@@ -34,6 +36,14 @@
     }
     &__button:disabled {
       filter: grayscale(1);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact__container {
+    form {
+      width: 50rem;
     }
   }
 }
