@@ -1,10 +1,10 @@
-<nav class="menu-bar__container" id="menu-bar">
+<nav class="menu-bar-celular__container" id="menu-bar-celular" *ngIf="isCelular">
   <div id="nav-icon" (click)="toggleNavIcon()">
     <span></span>
     <span></span>
     <span></span>
   </div>
-  <div class="menu-bar__container__logo">
+  <div class="menu-bar-celular__container__logo">
     <img
       src="assets/img/kaceresdev-logo-black-whitout-text.webp"
       alt="Logo kaceresdev sin texto"
@@ -12,7 +12,7 @@
       id="logo"
     />
   </div>
-  <div class="menu-bar__container__chat">
+  <div class="menu-bar-celular__container__chat">
     <a
       href="https://wa.me/652936149?text=Hola%20kaceresdev,%20me%20gustaría%20contar%20con%20tus%20servicio%20de%20Desarrollador%20de%20software"
     >
@@ -20,8 +20,23 @@
     </a>
   </div>
 </nav>
+<nav class="menu-bar__container" *ngIf="!isCelular" id="menu-bar">
+  <div class="menu-bar__container__logo" (click)="toTop()">
+    <img
+      src="assets/img/kaceresdev-simplelogo-without-background.png"
+      alt="Logo kaceresdev sin texto"
+      width="70px"
+      id="logo"
+    />
+  </div>
+  <div class="menu-bar__container__menu">
+    <li class="item" *ngFor="let item of menuItems">
+      <a [routerLink]="item.route" (click)="toTop(item.route)">{{ item.title }}</a>
+    </li>
+  </div>
+</nav>
 <div id="menu-items">
   <li class="item" *ngFor="let item of menuItems">
-    <a [routerLink]="item.route" (click)="toggleNavIcon()">{{ item.title }}</a>
+    <a [routerLink]="item.route" (click)="toTop(item.route); toggleNavIcon()">{{ item.title }}</a>
   </li>
 </div>

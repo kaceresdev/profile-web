@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-bar',
   templateUrl: './menu-bar.component.html',
   styleUrls: ['./menu-bar.component.scss'],
 })
-export class MenuBarComponent {
+export class MenuBarComponent implements OnInit {
+  isCelular: boolean;
   menuItems = [
     {
       title: 'Home',
@@ -20,6 +22,48 @@ export class MenuBarComponent {
       route: '/blog',
     },
   ];
+  lastScroll = 0;
+
+  constructor(public router: Router) {}
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    if (event.target.innerWidth < 1024) {
+      this.isCelular = true;
+      window.removeEventListener('scroll', this.manageShowingNav);
+    } else {
+      this.isCelular = false;
+      window.addEventListener('scroll', this.manageShowingNav);
+    }
+  }
+
+  ngOnInit() {
+    this.isCelular = window.screen.width < 1024 ? true : false;
+    if (!this.isCelular) {
+      window.addEventListener('scroll', this.manageShowingNav);
+    }
+  }
+
+  manageShowingNav() {
+    const menuBar = document.getElementById('menu-bar');
+    const currentScroll = window.scrollY;
+
+    if (currentScroll <= 35) {
+      menuBar!.classList.remove('scroll-up');
+      return;
+    }
+
+    if (currentScroll > this.lastScroll && !menuBar!.classList.contains('scroll-down')) {
+      // down
+      menuBar!.classList.remove('scroll-up');
+      menuBar!.classList.add('scroll-down');
+    } else if (currentScroll < this.lastScroll && menuBar!.classList.contains('scroll-down')) {
+      // up
+      menuBar!.classList.remove('scroll-down');
+      menuBar!.classList.add('scroll-up');
+    }
+    this.lastScroll = currentScroll;
+  }
 
   toggleNavIcon() {
     const nav = document.getElementById('nav-icon');
@@ -34,12 +78,20 @@ export class MenuBarComponent {
 
   easterEgg() {
     if (!document.getElementById('menu-items')?.classList.contains('show')) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      this.toTop();
       const logo = document.getElementById('logo');
       logo!.classList.add('spinner-logo');
       setTimeout(() => {
         logo!.classList.remove('spinner-logo');
       }, 500);
+    }
+  }
+
+  toTop(route?: string) {
+    if (this.router.url === route || !route) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0 });
     }
   }
 }

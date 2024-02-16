@@ -159,7 +159,7 @@
       width: 19rem;
       background-color: #101010;
       border-radius: 10%;
-      box-shadow: 0px 0px 30px rgb(181 46 49 / 70%);
+      box-shadow: 0px 0px 30px rgb(144 65 231 / 70%);
       position: relative;
       overflow: hidden;
       display: flex;
@@ -170,7 +170,7 @@
         position: absolute;
         height: 28rem;
         width: 30rem;
-        background-image: conic-gradient(transparent 225deg, #b52e31 315deg);
+        background-image: conic-gradient(transparent 225deg, #e034d6 315deg);
         animation: rotar 20s linear infinite;
       }
       @keyframes rotar {
@@ -381,6 +381,7 @@
       padding: 3% 7%;
       transition: all 0.2s ease-in-out;
       letter-spacing: 2px;
+      cursor: pointer;
       &__text {
         background-image: linear-gradient(to right, #fdaa00, #f565db);
         background-clip: text;

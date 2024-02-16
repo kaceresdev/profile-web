@@ -12,10 +12,28 @@ export class BlogComponent implements OnInit {
   constructor(private blogService: BlogService) {}
 
   ngOnInit(): void {
-    this.blogService.getDataFirebase('posts').then((data: IPost[]) => {
-      console.log('POSTS: ', data);
+    if (!sessionStorage.getItem('posts')) {
+      this.blogService
+        .getDataFirebase('posts')
+        .then((data: IPost[]) => {
+          console.log('POSTS: ', data);
 
-      this.posts = data;
-    });
+          this.posts = data;
+          sessionStorage.setItem('posts', JSON.stringify(this.posts));
+        })
+        .catch((err: Error) => {
+          console.log('ERROR: ', err);
+        });
+    } else {
+      this.posts = JSON.parse(sessionStorage.getItem('posts')!);
+    }
+  }
+
+  toBlog() {
+    window.location.href = 'https://blog.kaceres.dev/';
+  }
+
+  trackByFn(index: number, item: IPost) {
+    return item.title;
   }
 }

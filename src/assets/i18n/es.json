@@ -5,7 +5,7 @@
     "GREETING": "Hola Mundo!, soy kaceresdev",
     "PERSONAL_INFO_SECTION": {
       "TITLE": "kaceresdev",
-      "TEXT": "Mi nombre es Javier Cáceres y soy un Ingeniero Electrónico de Comunicaciones apasionado por el desarrollador web con una sólida experiencia en la creación de sitios web impresionantes y funcionales. Mi misión es transformar ideas en realidad digital, ofreciendo soluciones web innovadoras y atractivas.",
+      "TEXT": "Mi nombre es Javier Cáceres y soy un Ingeniero Electrónico de Comunicaciones apasionado por el desarrollo web con una sólida experiencia en la creación de sitios web impresionantes y funcionales. Mi misión es transformar ideas en realidad digital, ofreciendo soluciones web innovadoras y atractivas.",
       "TEXT2": "¿Tienes un proyecto en mente?",
       "TEXT3": "¡Hagámoslo realidad!"
     },
@@ -25,7 +25,7 @@
       "EXPERIENCE4": "Web Clientes de Empresa Retail con MarkoJs",
       "EXPERIENCE5": "Migración de aplicación a Micro-Frontends"
     },
-    "SPEAK": "¿Charlamos?",
+    "SPEAK": "¿Hablamos?",
     "BUTTON_CONTACT": "Contacta conmigo"
   }
 }
