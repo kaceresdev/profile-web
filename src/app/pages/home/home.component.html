@@ -84,7 +84,9 @@
   <section class="home__container__softSkills">
     <h2 class="home__container__softSkills__title">{{ 'HOME.SOFT_SKILLS' | translate }}</h2>
     <div class="home__container__softSkills__tags">
-      <div class="home__container__softSkills__tags__tag" *ngFor="let skill of softSkills">{{ skill }}</div>
+      <div class="home__container__softSkills__tags__tag" *ngFor="let skill of softSkills">
+        <p class="home__container__softSkills__tags__tag__text">{{ skill }}</p>
+      </div>
     </div>
   </section>
   <div class="home__container__speak">
