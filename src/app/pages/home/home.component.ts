@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  pauseIntervalBlog = false;
   technologiesSlider = [
     {
       imgSrc: 'assets/img/angular-logo.png',
@@ -70,7 +71,15 @@ export class HomeComponent implements OnInit {
     'organización',
   ];
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    setInterval(() => {
+      console.log(this.pauseIntervalBlog);
+
+      if (!this.pauseIntervalBlog) {
+        this.nextBlog();
+      }
+    }, 3000);
+  }
 
   sliderPause(idElement: string) {
     const sliderElement = document.getElementById(idElement);
@@ -85,5 +94,49 @@ export class HomeComponent implements OnInit {
     const element = document.getElementById(e);
     const verticalOffset = element!.getBoundingClientRect().top - pixelesGap;
     window.scrollBy({ top: verticalOffset, left: 0, behavior: 'smooth' });
+  }
+
+  nextBlog() {
+    const $slider = document.getElementById('slider');
+
+    let $sliderSectionFirst = document.querySelectorAll('.slider__imgs')[0];
+
+    $slider!.style.marginLeft = '-200%';
+    $slider!.style.transition = 'margin-left 1s';
+    setTimeout(() => {
+      $slider!.style.transition = 'none';
+      $slider!.insertAdjacentElement('beforeend', $sliderSectionFirst);
+      $slider!.style.marginLeft = '-100%';
+    }, 1000);
+  }
+
+  prevBlog() {
+    const $slider = document.getElementById('slider');
+    let sliderSection = document.querySelectorAll('.slider__imgs');
+    let sliderSectionLast = sliderSection[sliderSection.length - 1];
+
+    $slider!.style.marginLeft = '0%';
+    $slider!.style.transition = 'margin-left 1s';
+    setTimeout(() => {
+      $slider!.style.transition = 'none';
+      $slider!.insertAdjacentElement('afterbegin', sliderSectionLast);
+      $slider!.style.marginLeft = '-100%';
+    }, 1000);
+  }
+
+  arrowNextBlog() {
+    this.pauseIntervalBlog = true;
+    this.nextBlog();
+    setTimeout(() => {
+      this.pauseIntervalBlog = false;
+    }, 6000);
+  }
+
+  arrowPrevBlog() {
+    this.pauseIntervalBlog = true;
+    this.prevBlog();
+    setTimeout(() => {
+      this.pauseIntervalBlog = false;
+    }, 6000);
   }
 }

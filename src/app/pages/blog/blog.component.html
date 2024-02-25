@@ -7,7 +7,7 @@
   <p>Y quien sabe, puede que algún dia acudas a este blog para resolver tus problemas 😉.</p>
   <h3>Últimos posts</h3>
   <div class="blog__container__post" *ngFor="let post of posts; index as i; trackBy: trackByFn">
-    <img src="{{ post.imgUrl }}" alt="Imagen del post" class="blog__container__post__img" width="15%" />
+    <img src="{{ post.imgUrl }}" alt="Imagen del post" class="blog__container__post__img" />
     <p>{{ post.title }}</p>
   </div>
   <div class="blog__container__blog">
