@@ -1,6 +1,7 @@
 export const environment = {
   production: false,
   inMaintenance: false,
+  urlBaseServer: 'http://localhost:3000',
   firebase: {
     projectId: 'kaceresweb',
     appId: '1:131063880385:web:464f94d995b08b98e21240',
