@@ -73,8 +73,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     setInterval(() => {
-      console.log(this.pauseIntervalBlog);
-
       if (!this.pauseIntervalBlog) {
         this.nextBlog();
       }
@@ -96,18 +94,24 @@ export class HomeComponent implements OnInit {
     window.scrollBy({ top: verticalOffset, left: 0, behavior: 'smooth' });
   }
 
+  toTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   nextBlog() {
     const $slider = document.getElementById('slider');
 
     let $sliderSectionFirst = document.querySelectorAll('.slider__imgs')[0];
 
-    $slider!.style.marginLeft = '-200%';
-    $slider!.style.transition = 'margin-left 1s';
-    setTimeout(() => {
-      $slider!.style.transition = 'none';
-      $slider!.insertAdjacentElement('beforeend', $sliderSectionFirst);
-      $slider!.style.marginLeft = '-100%';
-    }, 1000);
+    if ($slider) {
+      $slider!.style.marginLeft = '-200%';
+      $slider!.style.transition = 'margin-left 1s';
+      setTimeout(() => {
+        $slider!.style.transition = 'none';
+        $slider!.insertAdjacentElement('beforeend', $sliderSectionFirst);
+        $slider!.style.marginLeft = '-100%';
+      }, 1000);
+    }
   }
 
   prevBlog() {

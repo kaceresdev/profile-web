@@ -1,44 +1,64 @@
-footer {
+.footer {
   background-color: black;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   color: white;
-  height: 3.5rem;
+  height: 4rem;
   align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   background: linear-gradient(to right, #fdaa04, #fb68da);
-  a {
-    text-align: center;
-    img {
-      width: 30%;
-    }
-  }
-}
-
-@media (min-width: 540px) {
-  footer {
-    height: 4.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-  footer {
-    a {
-      img {
-        width: 25%;
-      }
-    }
-  }
-}
-
-@media (min-width: 1024px) {
-  footer {
+  width: 100%;
+  &__text {
+    padding-left: 4rem;
+    color: black;
+    display: none;
     width: 100%;
-    justify-content: space-around;
+  }
+  &__icons {
+    gap: 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     a {
+      text-align: center;
       img {
         width: 3rem;
       }
     }
   }
 }
+
+@media (min-width: 540px) {
+  .footer {
+    height: 4.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    &__text {
+      display: block;
+    }
+    &__icons {
+      padding-right: 4rem;
+      justify-content: flex-end;
+      gap: 2rem;
+    }
+  }
+}
+
+// @media (min-width: 1024px) {
+//   .footer {
+//     &__icons {
+//       a {
+//         img {
+//           width: 3rem;
+//         }
+//       }
+//     }
+//   }
+// }

@@ -132,6 +132,7 @@
   &__arrowDown {
     text-align: center;
     &__bounce {
+      cursor: pointer;
       width: 3rem;
       scroll-behavior: smooth;
       animation: bounce-down 2s linear infinite;

@@ -91,7 +91,7 @@
   </section>
   <div class="home__container__speak">
     <h2 class="home__container__speak__title">{{ 'HOME.SPEAK' | translate }}</h2>
-    <button class="home__container__speak__button" routerLink="/contact">
+    <button class="home__container__speak__button" routerLink="/contact" (click)="toTop()">
       <span class="home__container__speak__button__text">{{ 'HOME.BUTTON_CONTACT' | translate | uppercase }}</span>
     </button>
   </div>
