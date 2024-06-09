@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   inMaintenance: true,
-  urlBaseServer: 'https://kaceres.dev:3000',
+  urlBaseServer: 'https://us-central1-kaceresweb.cloudfunctions.net/app',
   firebase: {
     projectId: 'kaceresweb',
     appId: '1:131063880385:web:464f94d995b08b98e21240',

@@ -10,7 +10,18 @@
       }
     ]
   },
-  "functions": {
-    "source": "server"
-  }
+  "functions": [
+    {
+      "source": "server",
+      "runtime": "nodejs18",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ]
+    }
+  ]
 }

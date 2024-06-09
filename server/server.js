@@ -2,9 +2,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
+const functions = require("firebase-functions");
 
 const app = express();
-const port = 3000;
+const port = 8443;
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -25,7 +26,7 @@ app.post("/send-email", (req, res) => {
   const mailOptions = {
     from: "kaceresdev@gmail.com",
     to: "kaceresdev@gmail.com",
-    subject: "Nuevo contacto desde la web",
+    subject: "Nuevo contacto desde la Web",
     text: `
       Asunto: ${name}
       Email: ${email}
@@ -45,5 +46,7 @@ app.post("/send-email", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server listening at http://localhost:${port}`);
+  console.log(`Server listening at port ${port}`);
 });
+
+exports.app = functions.https.onRequest(app);
