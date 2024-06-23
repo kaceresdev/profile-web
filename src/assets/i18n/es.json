@@ -26,6 +26,23 @@
       "EXPERIENCE5": "Migración de aplicación a Micro-Frontends"
     },
     "SPEAK": "¿Hablamos?",
-    "BUTTON_CONTACT": "Contacta conmigo"
+    "BUTTON_CONTACT": "Contacta conmigo",
+    "BLOG": "Continua descubriendo mi blog"
+  },
+  "CONTACT": {
+    "WITH_ME": "Contacta conmigo",
+    "EMAIL": "Email",
+    "SUBJECT": "Asunto",
+    "MESSAGE": "Mensaje",
+    "SEND": "Enviar"
+  },
+  "BLOG": {
+    "KNOWN": "Conoce mi blog",
+    "TEXT": "Aquí encontrarás tips y recursos de programación, artículos de tecnología y cualquier cosa interesante relacionada principalmente con el mundo del desarrollo web.",
+    "TEXT_2": "Y quien sabe, puede que algún dia acudas a este blog para resolver tus problemas 😉.",
+    "LAST_POSTS": "Últimos posts"
+  },
+  "FOOTER": {
+    "DEVELOPER": "Desarrollado por kaceresdev"
   }
 }

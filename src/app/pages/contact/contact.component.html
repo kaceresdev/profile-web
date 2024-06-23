@@ -1,14 +1,16 @@
 <div class="contact__container">
   <form [formGroup]="mailForm" (ngSubmit)="onSubmit()">
-    <h2>Contacta conmigo</h2>
-    <h3>Email</h3>
+    <h2>{{ 'CONTACT.WITH_ME' | translate }}</h2>
+    <h3>{{ 'CONTACT.EMAIL' | translate }}</h3>
     <input type="email" formControlName="email" />
-    <h3>Asunto</h3>
+    <h3>{{ 'CONTACT.SUBJECT' | translate }}</h3>
     <input type="text" formControlName="subject" />
-    <h3>Mensaje</h3>
+    <h3>{{ 'CONTACT.MESSAGE' | translate }}</h3>
     <textarea cols="30" rows="10" formControlName="comments"></textarea>
     <div class="contact__container__divButton">
-      <button class="contact__container__divButton__button" type="submit" [disabled]="!mailForm.valid">Enviar</button>
+      <button class="contact__container__divButton__button" type="submit" [disabled]="!mailForm.valid">
+        {{ 'CONTACT.SEND' | translate }}
+      </button>
     </div>
   </form>
 </div>
