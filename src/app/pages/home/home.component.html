@@ -96,29 +96,18 @@
     </button>
   </div>
   <section class="home__container__blog">
-    <h2 class="home__container__blog__title">Continua descubriendo mi blog</h2>
+    <div class="home__container__blog__title">
+      <h2>Continua descubriendo mi blog</h2>
+      <img src="assets/img/arrow-right.svg" alt="Flecha derecha" routerLink="/blog" (click)="toTop()" />
+    </div>
     <div class="home__container__blog__posts">
-      <div class="slider__btn slider__btn--left" id="btn-left" (click)="arrowPrevBlog()">
-        <img src="assets/img/arrow-page-right.svg" alt="Flecha izquierda" />
-      </div>
       <div class="container-slider">
-        <div cLass="slider" id="slider">
-          <div class="slider__imgs">
-            <img class="slider__imgs__img" src="assets/img/setup.jpg" alt="" />
-            <p>IMAGEN 1</p>
-          </div>
-          <div class="slider__imgs">
-            <img class="slider__imgs__img" src="assets/img/setup.jpg" alt="" />
-            <p>IMAGEN 2</p>
-          </div>
-          <div class="slider__imgs">
-            <img class="slider__imgs__img" src="assets/img/setup.jpg" alt="" />
-            <p>IMAGEN 3</p>
+        <div class="slider" id="slider">
+          <div class="slider__imgs" *ngFor="let post of posts; index as i; trackBy: trackByFn">
+            <img src="{{ post.imgUrl }}" alt="Imagen del post" class="slider__imgs__img" />
+            <p>{{ post.title }}</p>
           </div>
         </div>
-      </div>
-      <div class="slider__btn slider__btn--right" id="btn-right" (click)="arrowNextBlog()">
-        <img src="assets/img/arrow-page-right.svg" alt="Flecha derecha" />
       </div>
     </div>
   </section>

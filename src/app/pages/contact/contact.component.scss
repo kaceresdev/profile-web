@@ -35,6 +35,11 @@
       font-weight: bold;
       color: black;
     }
+    &__button:hover {
+      &:not(:disabled) {
+        transform: scale(1.1);
+      }
+    }
     &__button:disabled {
       filter: grayscale(1);
     }

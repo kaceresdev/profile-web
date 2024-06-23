@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IPost } from 'src/app/interfaces/posts.model';
+import { BlogService } from 'src/app/services/blog/blog.service';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  pauseIntervalBlog = false;
   technologiesSlider = [
     {
       imgSrc: 'assets/img/angular-logo.png',
@@ -71,12 +72,30 @@ export class HomeComponent implements OnInit {
     'organización',
   ];
 
+  posts: IPost[] = [];
+
+  constructor(private blogService: BlogService) {}
+
   ngOnInit(): void {
     setInterval(() => {
-      if (!this.pauseIntervalBlog) {
-        this.nextBlog();
-      }
+      this.nextBlog();
     }, 3000);
+
+    if (!sessionStorage.getItem('posts')) {
+      this.blogService
+        .getDataFirebase('posts')
+        .then((data: IPost[]) => {
+          console.log('POSTS: ', data);
+
+          this.posts = data;
+          sessionStorage.setItem('posts', JSON.stringify(this.posts));
+        })
+        .catch((err: Error) => {
+          console.log('ERROR: ', err);
+        });
+    } else {
+      this.posts = JSON.parse(sessionStorage.getItem('posts')!);
+    }
   }
 
   sliderPause(idElement: string) {
@@ -114,33 +133,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  prevBlog() {
-    const $slider = document.getElementById('slider');
-    let sliderSection = document.querySelectorAll('.slider__imgs');
-    let sliderSectionLast = sliderSection[sliderSection.length - 1];
-
-    $slider!.style.marginLeft = '0%';
-    $slider!.style.transition = 'margin-left 1s';
-    setTimeout(() => {
-      $slider!.style.transition = 'none';
-      $slider!.insertAdjacentElement('afterbegin', sliderSectionLast);
-      $slider!.style.marginLeft = '-100%';
-    }, 1000);
-  }
-
-  arrowNextBlog() {
-    this.pauseIntervalBlog = true;
-    this.nextBlog();
-    setTimeout(() => {
-      this.pauseIntervalBlog = false;
-    }, 6000);
-  }
-
-  arrowPrevBlog() {
-    this.pauseIntervalBlog = true;
-    this.prevBlog();
-    setTimeout(() => {
-      this.pauseIntervalBlog = false;
-    }, 6000);
+  trackByFn(index: number, item: IPost) {
+    return item.title;
   }
 }
