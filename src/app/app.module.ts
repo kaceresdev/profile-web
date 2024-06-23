@@ -17,6 +17,8 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getDatabase, provideDatabase } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
+import { LoaderComponent } from './shared/loader/loader.component';
+import { ModalComponent } from './shared/modal/modal.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -32,6 +34,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     FooterComponent,
     ContactComponent,
     BlogComponent,
+    LoaderComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,10 @@ import { EmailService } from 'src/app/services/email/email.service';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
+  isLoading = false;
+  isEmailSend = false;
+  isEmailKO = false;
+
   constructor(private emailService: EmailService) {}
 
   mailForm = new FormGroup({
@@ -18,6 +22,7 @@ export class ContactComponent {
 
   onSubmit() {
     if (this.mailForm) {
+      this.isLoading = true;
       this.emailService
         .sendEmail(
           this.mailForm.get('subject')?.value!,
@@ -25,9 +30,20 @@ export class ContactComponent {
           this.mailForm.get('comments')?.value!
         )
         .subscribe({
-          next: (resp) => console.log('Email sent ', resp),
-          error: (err) => console.error('An error occurred :', err),
-          complete: () => console.log('There are no more action happen.'),
+          next: (resp) => {
+            this.isLoading = false;
+            this.isEmailSend = true;
+            console.log('Email sent ', resp);
+          },
+          error: (err) => {
+            this.isLoading = false;
+            this.isEmailKO = true;
+            console.error('An error occurred :', err);
+          },
+          complete: () => {
+            this.mailForm.reset();
+            console.log('There are no more action happen.');
+          },
         });
     }
   }

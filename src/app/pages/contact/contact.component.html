@@ -13,4 +13,6 @@
       </button>
     </div>
   </form>
+  <app-modal *ngIf="isEmailSend || isEmailKO" [wasSent]="isEmailSend"></app-modal>
 </div>
+<app-loader *ngIf="isLoading"></app-loader>
